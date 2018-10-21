@@ -1,0 +1,105 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Stampalike by TEMPLATED</title>
+<link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css" />
+<link href="http://fonts.googleapis.com/css?family=Coda:400,800" rel="stylesheet" type="text/css" />
+<link href="assets/style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="menu-wrapper">
+	<div id="menu">
+		<ul>
+			<li class="current_page_item"><a routerLink="">Homepage</a></li>
+			<li><a routerLink="/about">About</a></li>
+			<li><a routerLink="/heroes">Heros</a></li>
+			<li><a routerLink="/blog">Blog</a></li>
+			<li><a routerLink="#">Links</a></li>
+			<li><a routerLink="/contact">Contact</a></li>
+		</ul>
+	</div>
+	<!-- end #menu --> 
+</div>
+<div id="header-wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1><a href="#">StampALike</a></h1>
+			<p>Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a></p>
+		</div>
+	</div>
+</div>
+<div id="wrapper"> 
+	<!-- end #header -->
+	<div id="page-bgtop"></div>
+	<div id="page">
+		<div><img src="assets/images/pics01.jpg" width="920" height="300" alt="" /></div>
+		<div id="content">
+
+			<div class="post">
+				<h2 class="title"><a href="#">Super Stars</a></h2>
+				<p class="meta"><span class="date">June 01, 2012</span><span class="posted">Posted by <a href="#">Someone</a></span></p>
+				<div style="clear: both;">&nbsp;</div>
+				<div class="entry">
+					    <!-- from details component -->
+			    <app-hero-detail [hero]="selectedHero"></app-hero-detail>
+			    <!-- property binding  -->
+			       <div class="panel panel-default">
+				  	  
+					  	<div class="panel-body">
+						      
+						      <label>Note:
+							   selectedHero (must be an input property) goes to hero-detail.componet via @input decorator like 
+							    <p><code class="animated fadeIn"><span class="tag">&lt;app-hero-detail</span><span class="pln"> [</span><span class="atn">hero</span><span class="pln">]</span><span class="pun">=</span><span class="atv">"selectedHero"</span><span class="tag">&gt;&lt;/app-hero-detail&gt;</span></code></p>
+							  </label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div style="clear: both;">&nbsp;</div>
+		</div>
+		<!-- end #content -->
+		<div id="sidebar">
+			<ul>
+				<li>
+					<h2>SearCh Here:</h2>
+					<div id="search" >
+						<form method="get" action="#">
+							<div>
+								<input type="text" name="s" id="search-text" value="" />
+								
+							</div>
+						</form>
+					</div>
+					<div style="clear: both;">&nbsp;</div>
+				</li>
+			
+				<li>
+					<h2>Categories</h2>
+					<ul class="heroes">
+						<li *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" (click)="onSelect(hero)"><a  class="badge1">{{hero.name |uppercase}}</a> ({{hero.id}})</li>
+
+					</ul>
+				</li>
+
+			</ul>
+		</div>
+		<!-- end #sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<div id="page-bgbtm"></div>
+	<!-- end #page --> 
+</div>
+<div id="footer">
+	<p>2012. Untitled. All rights reserved. Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>. Photos by <a href="http://fotogrph.com/">fotogrph</a>.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>
+
+
+
+
+

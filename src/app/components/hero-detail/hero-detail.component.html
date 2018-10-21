@@ -1,0 +1,11 @@
+<div class="panel-group" *ngIf="hero">
+    <div class="panel panel-default">
+  	  <div class="panel-heading"><h2>{{hero.name | uppercase}}</h2>[From hero-detail.component]</div>
+	  	<div class="panel-body">
+		      <span>id: </span>{{hero.id}}
+		      <label>name:
+			    <input [(ngModel)]="hero.name" placeholder="name">
+			  </label>
+		</div>
+	</div>
+</div>
